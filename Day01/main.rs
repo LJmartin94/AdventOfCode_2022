@@ -20,13 +20,14 @@ fn main()
 	}
 	int_input_vector.push(sum);
 
-	let mut highest = 0;
-	for i in int_input_vector{
-		if i > highest{
-			highest = i;
-		}
-		println!("{}",i);
-	}
+	int_input_vector.sort();
+
+	let highest = int_input_vector[int_input_vector.len() - 1];
 
 	println!("Highest value found was {}", highest);
+	let top_three = int_input_vector[int_input_vector.len() - 1] +
+	int_input_vector[int_input_vector.len() - 2] +
+	int_input_vector[int_input_vector.len() - 3];
+	println!("The highest three values found summed up to {}", top_three);
+
 }
